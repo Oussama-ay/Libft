@@ -1,9 +1,11 @@
+#include "libft.h"
+
 int	is_delimiter(char s, char c)
 {
 	return (s == c);
 }
 
-int	ft_count(chat *str, char c)
+int	ft_count(char const *str, char c)
 {
 	int	count;
 
@@ -20,7 +22,7 @@ int	ft_count(chat *str, char c)
 	return (count);
 }
 
-char	*ft_word(char *str, char c)
+char	*ft_word(char const *str, char c)
 {
 	int	len;
 	int	i;
@@ -31,7 +33,7 @@ char	*ft_word(char *str, char c)
 		len++;
 	word = malloc(len + 1);
 	if (!word)
-		return (NULL);
+		return (0);
 	i = 0;
 	while (i < len)
 		word[i] = str[i++];
@@ -48,7 +50,7 @@ char	**ft_split(char const *s, char c)
 	nbr_words = ft_count(s, c);
 	result = malloc(sizeof(char *) * (nbr_words + 1));
 	if (!result)
-		return (NULL);
+		return (0);
 	i = 0;
 	while (*s)
 	{
