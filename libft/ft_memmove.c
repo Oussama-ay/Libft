@@ -10,6 +10,9 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	_dest = (char *)dest;
 	i = 0;
 	while (_src[i] && i < n)
-		_dest[i] = _src[i++];
+	{
+		_dest[i] = _src[i];
+		i++;
+	}
 	return (dest);
 }

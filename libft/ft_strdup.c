@@ -10,7 +10,10 @@ char	*strdup(const char *s)
 		return (0);
 	i = 0;
 	while (s[i])
-		dest[i] = s[i++];
+	{
+		dest[i] = s[i];
+		i++;
+	}
 	dest[i] = 0;
 	return (dest);
 }

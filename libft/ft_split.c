@@ -36,7 +36,10 @@ char	*ft_word(char const *str, char c)
 		return (0);
 	i = 0;
 	while (i < len)
-		word[i] = str[i++];
+	{
+		word[i] = str[i];
+		i++;
+	}
 	word[i] = 0;
 	return (word);
 }
@@ -59,7 +62,7 @@ char	**ft_split(char const *s, char c)
 		if (*s)
 		{
 			result[i++] = ft_word(s, c);
-			while (*s && !is_delimiter(*s, c));
+			while (*s && !is_delimiter(*s, c))
 				s++;
 		}
 	}

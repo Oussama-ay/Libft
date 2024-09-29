@@ -16,6 +16,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*trimmed;
 	int	end;
 	int	start;
+	int	i;
 
 	if (!s1)
 		return (NULL);

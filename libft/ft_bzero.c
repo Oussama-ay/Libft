@@ -3,10 +3,10 @@
 void	ft_bzero(void *s, size_t n)
 {
 	char	*str;
-	int	i;
+	size_t	i;
 
 	str = (char *)s;
 	i = 0;
-	while (str[i])
+	while (i < n)
 		str[i++] = 0;
 }
