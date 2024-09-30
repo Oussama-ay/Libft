@@ -3,7 +3,7 @@
 void	ft_convert(char *result, long n, int *i)
 {
 	if (n > 9)
-		ft_convert(result, n, i);
+		ft_convert(result, n / 10, i);
 	result[*i] = n % 10 + '0';
 	(*i)++;
 }
