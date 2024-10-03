@@ -33,4 +33,7 @@ fclean: clean
 
 re: fclean all
 
+so: $(OBJS) $(BONUS_OBJS)
+	$(CC) -shared -o libft.so $(OBJS) $(BONUS_OBJS)
+
 .PHONY: all bonus clean fclean re

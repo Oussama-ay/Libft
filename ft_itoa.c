@@ -8,7 +8,7 @@ void	ft_convert(char *result, long n, int *i)
 	(*i)++;
 }
 
-int	ft_count(long n)
+int	ft_icount(long n)
 {
 	int	count;
 
@@ -30,7 +30,7 @@ char *ft_itoa(int n)
 
 	nbr = n;
 	i = 0;
-	size = ft_count(nbr);
+	size = ft_icount(nbr);
 	result = malloc(size + 1);
 	if (!result)
 		return (NULL);
