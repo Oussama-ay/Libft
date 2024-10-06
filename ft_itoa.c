@@ -1,19 +1,11 @@
 #include "libft.h"
 
-void	ft_convert(char *result, long n, int *i)
-{
-	if (n > 9)
-		ft_convert(result, n / 10, i);
-	result[*i] = n % 10 + '0';
-	(*i)++;
-}
-
-int	ft_icount(long n)
+int	ft_icount(int n)
 {
 	int	count;
 
 	count = 1;
-	while (n)
+	while (n > 9)
 	{
 		n /= 10;
 		count++;
@@ -21,25 +13,30 @@ int	ft_icount(long n)
 	return (count);
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-	char	*result;
-	long	nbr;
+	int	is_negatif;
+	int	digits;
+	char	*T;
 	int	i;
-	int	size;
 
-	nbr = n;
-	i = 0;
-	size = ft_icount(nbr);
-	result = malloc(size + 1);
-	if (!result)
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
+	is_negatif = n < 0;
+	if (is_negatif)
+		n = -n;
+	digits = ft_icount(n);
+	T = (char *)malloc(sizeof(char) * (digits + is_negatif + 1));
+	if (!T)
 		return (NULL);
-	if (nbr < 0)
-	{
-		nbr = -nbr;
-		result[i++] = '-';
-	}
-	ft_convert(result, nbr, &i);
-	result[i] = 0;
-	return (result);
+	i = digits + is_negatif - 1;
+	do {
+		T[i] = n % 10 + '0';
+		n /= 10;
+		i--;
+	} while (n != 0);
+	if (is_negatif)
+		T[0] = '-';
+	T[digits + is_negatif] = '\0';
+	return (T);
 }
