@@ -29,8 +29,6 @@ libft/
 │   ├── additional/
 │   └── bonus/
 │
-├── tests/
-│
 ├── Makefile
 │
 └── README.md
