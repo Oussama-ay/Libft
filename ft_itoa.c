@@ -26,15 +26,18 @@ char	*ft_itoa(int n)
 	if (is_negatif)
 		n = -n;
 	digits = ft_icount(n);
-	T = (char *)malloc(sizeof(char) * (digits + is_negatif + 1));
+	T = malloc(digits + is_negatif + 1);
 	if (!T)
 		return (NULL);
 	i = digits + is_negatif - 1;
-	do {
+	if (n == 0)
+		T[i--] = '0';
+	while (n != 0)
+	{
 		T[i] = n % 10 + '0';
 		n /= 10;
 		i--;
-	} while (n != 0);
+	}
 	if (is_negatif)
 		T[0] = '-';
 	T[digits + is_negatif] = '\0';
