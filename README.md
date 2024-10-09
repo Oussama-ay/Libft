@@ -1,17 +1,5 @@
 # libft: Custom C Library
 
-## Table of Contents
-1. [Project Overview](#project-overview)
-2. [Project Structure](#project-structure)
-3. [Function Specifications](#function-specifications)
-   3.1 [Libc Functions](#libc-functions)
-   3.2 [Additional Functions](#additional-functions)
-   3.3 [Bonus: Linked List Functions](#bonus-linked-list-functions)
-4. [Compilation Instructions](#compilation-instructions)
-5. [Usage Guidelines](#usage-guidelines)
-6. [Testing](#testing)
-7. [Coding Standards](#coding-standards)
-
 ## 1. Project Overview
 
 The libft project involves creating a custom C library that implements various standard library functions and additional utilities. This library serves as a fundamental tool for future C programming projects, offering a collection of well-implemented and tested functions for reuse across different applications.
