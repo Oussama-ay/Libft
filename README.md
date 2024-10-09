@@ -4,27 +4,10 @@
 
 The libft project involves creating a custom C library that implements various standard library functions and additional utilities. This library serves as a fundamental tool for future C programming projects, offering a collection of well-implemented and tested functions for reuse across different applications.
 
-## 2. Project Structure
 
-```
-libft/
-│
-├── include/
-│   └── libft.h
-│
-├── src/
-│   ├── libc/
-│   ├── additional/
-│   └── bonus/
-│
-├── Makefile
-│
-└── README.md
-```
+## 2. Function Specifications
 
-## 3. Function Specifications
-
-### 3.1 Libc Functions
+### 2.1 Libc Functions
 
 | Function | Prototype | Description |
 |----------|-----------|-------------|
@@ -41,7 +24,7 @@ libft/
 | ft_strlcpy | `size_t ft_strlcpy(char *dst, const char *src, size_t dstsize);` | Copies up to dstsize - 1 characters from the NUL-terminated string src to dst, NUL-terminating the result. |
 | ft_strlcat | `size_t ft_strlcat(char *dst, const char *src, size_t dstsize);` | Appends the NUL-terminated string src to the end of dst. It will append at most dstsize - strlen(dst) - 1 bytes, NUL-terminating the result. |
 
-### 3.2 Additional Functions
+### 2.2 Additional Functions
 
 | Function | Prototype | Description |
 |----------|-----------|-------------|
@@ -52,7 +35,7 @@ libft/
 | ft_itoa | `char *ft_itoa(int n);` | Allocates and returns a string representing the integer received as an argument. |
 
 
-### 3.3 Bonus: Linked List Functions
+### 2.3 Bonus: Linked List Functions
 
 | Function | Prototype | Description |
 |----------|-----------|-------------|
@@ -61,7 +44,7 @@ libft/
 | ft_lstsize | `int ft_lstsize(t_list *lst);` | Counts the number of elements in a list. |
 | ft_lstlast | `t_list *ft_lstlast(t_list *lst);` | Returns the last element of the list. |
 
-## 4. Compilation Instructions
+## 3. Compilation Instructions
 
 To compile the library, utilize the provided Makefile with the following commands:
 
@@ -73,7 +56,7 @@ make fclean # Removes object files and the library
 make re     # Recompiles the library
 ```
 
-## 5. Usage Guidelines
+## 4. Usage Guidelines
 
 To utilize libft in C projects:
 
@@ -86,12 +69,12 @@ To utilize libft in C projects:
    gcc your_c_file.c libft.a
    ```
 
-## 6. Testing
+## 5. Testing
 
 * [jtoty/Libftest](https://github.com/jtoty/Libftest)
 * [alelievr/libft-unit-test](https://github.com/alelievr/libft-unit-test)
 
-## 7. Coding Standards
+## 6. Coding Standards
 
 This project adheres to the Norm coding standard required by 42 School. Key points include:
 
