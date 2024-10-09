@@ -1,5 +1,7 @@
 <div align="center">
-#  libft: Custom C Library 
+   <h1 style="font-size: 3em; border-bottom: 2px solid #333; padding-bottom: 10px;">
+      libft: Custom C Library
+   </h1>
 </div>
 
 ## 1. Project Overview
