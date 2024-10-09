@@ -1,4 +1,6 @@
-# libft: Custom C Library
+<div align="center">
+#  libft: Custom C Library 
+</div>
 
 ## 1. Project Overview
 
