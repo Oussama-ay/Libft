@@ -78,8 +78,6 @@ Ensure the reliability of your libft implementation by using these popular testi
 * [jtoty/Libftest](https://github.com/jtoty/Libftest)
 * [alelievr/libft-unit-test](https://github.com/alelievr/libft-unit-test)
 
-![Testing](https://media.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif)
-
 ## 6. Coding Standards
 
 This project adheres to the Norm coding standard required by 42 School. Key points include:
