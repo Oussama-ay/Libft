@@ -77,20 +77,3 @@ Ensure the reliability of your libft implementation by using these popular testi
 
 * [jtoty/Libftest](https://github.com/jtoty/Libftest)
 * [alelievr/libft-unit-test](https://github.com/alelievr/libft-unit-test)
-
-## 6. Coding Standards
-
-This project adheres to the Norm coding standard required by 42 School. Key points include:
-
-- Functions must not exceed 25 lines
-- Maximum of 5 function definitions in a .c file
-- One instruction per line
-- Forbidden use of: for, do...while, switch, case, goto
-- No function declarations in .c files
-- Mandatory use of the static keyword when possible
-
-Refer to the official Norm documentation for a complete list of coding standards.
-
-## 8. Conclusion
-
-Congratulations on embarking on your libft journey! This project will strengthen your C programming skills and provide you with a valuable toolkit for future projects.
