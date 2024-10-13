@@ -1,6 +1,6 @@
 <div align="center">
    <h1 style="font-size: 3em; border-bottom: 2px solid #333; padding-bottom: 10px;">
-      libft: Custom C Library
+      libft: Static Library
    </h1>
 </div>
 
@@ -77,3 +77,7 @@ Ensure the reliability of your libft implementation by using these popular testi
 
 * [jtoty/Libftest](https://github.com/jtoty/Libftest)
 * [alelievr/libft-unit-test](https://github.com/alelievr/libft-unit-test)
+
+## 6. Resources
+
+* [Create a Library in C](https://www.geeksforgeeks.org/how-do-i-create-a-library-in-c)
