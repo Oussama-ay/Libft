@@ -73,8 +73,6 @@ To utilize libft in C projects:
 
 ## 5. Testing
 
-Ensure the reliability of your libft implementation by using these popular testing suites:
-
 * [jtoty/Libftest](https://github.com/jtoty/Libftest)
 * [alelievr/libft-unit-test](https://github.com/alelievr/libft-unit-test)
 
