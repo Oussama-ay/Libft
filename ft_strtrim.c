@@ -1,37 +1,59 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: oayyoub <oayyoub@student.1337.ma>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/24 15:03:44 by oayyoub           #+#    #+#             */
+/*   Updated: 2024/10/27 12:10:31 by oayyoub          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-int	valid(char const c, char const *set)
+static int	cheack(char c, const char *set)
 {
-	int	i;
-
-	i = 0;
-	while (set[i])
-		if (set[i++] == c)
+	while (*set)
+	{
+		if (*set == c)
 			return (1);
+		set++;
+	}
 	return (0);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*trimmed;
-	int	end;
-	int	start;
-	int	i;
+	int		start;
+	int		end;
+	int		i;
+	char	*str;
 
 	if (!s1)
-		return (NULL);
-	end = ft_strlen(s1);
+		return (0);
+	if (*s1 == '\0')
+		return (ft_strdup(""));
 	start = 0;
-	while (valid(s1[start], set))
+	while (cheack(s1[start], set))
 		start++;
-	while (end > start && valid(s1[end - 1], set))
+	end = ft_strlen(s1);
+	while (end > start && cheack(s1[end - 1], set))
 		end--;
-	trimmed = malloc(end - start + 1);
-	if (!trimmed)
-		return (NULL);
+	str = malloc(end - start + 1);
+	if (!str)
+		return (0);
 	i = 0;
 	while (start < end)
-		trimmed[i++] = s1[start++];
-	trimmed[i] = 0;
-	return (trimmed);
+		str[i++] = s1[start++];
+	str[i] = 0;
+	return (str);
 }
+
+/*int main(int argc, char const *argv[])
+{
+	char t[] = "/+/-ab/-cdc/+/-";
+	char set[] = "/-+";
+	printf("%s",ft_strtrim(t, set));
+	return 0;
+}*/
